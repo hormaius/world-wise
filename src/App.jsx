@@ -16,14 +16,24 @@ function App() {
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  /* const fetchJson = () => {
-    fetch("../data/cities.json")
-      .then((response) => response.json())
-      .then((data) => setCities(data))
-      .catch((e) => {
-        console.log(e.message);
-      });
-  }; */
+  /* useEffect(() => {
+    try {
+      const fetchJson = async () => {
+        setIsLoading(true);
+        fetch("../data/cities.json")
+          .then((response) => {
+            return response.json();
+          })
+          .then((data) => setCities(data));
+      };
+      fetchJson();
+    } catch (e) {
+      console.log(e);
+    } finally {
+      setIsLoading(false);
+    }
+  }, []); */
+
   useEffect(() => {
     const fetchJson = async () => {
       setIsLoading(true);
@@ -32,27 +42,9 @@ function App() {
       setCities(data);
       setIsLoading(false);
     };
-    const fetched = fetchJson();
-    console.log(`fetched: ${fetched}`);
+    fetchJson();
   }, []);
   console.log(`cities:`, cities);
-
-  // useEffect(() => fetchJson(), []);
-  /* useEffect(function () {
-    async function fetchCities() {
-      try {
-        setIsLoading(true);
-        const res = await fetch(`${BASE_URL}/cities`);
-        const data = await res.json();
-        setCities(data);
-      } catch {
-        console.log("There was an error loading data...");
-      } finally {
-        setIsLoading(false);
-      }
-    }
-    fetchCities();
-  }, []); */
 
   return (
     <BrowserRouter>
