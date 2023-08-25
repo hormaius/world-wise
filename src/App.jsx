@@ -8,14 +8,37 @@ import Login from "./pages/Login";
 import CityList from "./components/CityList";
 import { useState, useEffect } from "react";
 import CountriesList from "./components/CountryList";
+/* import data from "../data/cities.json"; */
 
-const BASE_URL = "https://localhost:8000";
+/* const BASE_URL = "https://localhost:8000"; */
 
 function App() {
   const [cities, setCities] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-  useEffect(function () {
+  /* const fetchJson = () => {
+    fetch("../data/cities.json")
+      .then((response) => response.json())
+      .then((data) => setCities(data))
+      .catch((e) => {
+        console.log(e.message);
+      });
+  }; */
+  useEffect(() => {
+    const fetchJson = async () => {
+      setIsLoading(true);
+      const response = await fetch("../data/cities.json");
+      const data = await response.json();
+      setCities(data);
+      setIsLoading(false);
+    };
+    const fetched = fetchJson();
+    console.log(`fetched: ${fetched}`);
+  }, []);
+  console.log(`cities:`, cities);
+
+  // useEffect(() => fetchJson(), []);
+  /* useEffect(function () {
     async function fetchCities() {
       try {
         setIsLoading(true);
@@ -29,7 +52,7 @@ function App() {
       }
     }
     fetchCities();
-  }, []);
+  }, []); */
 
   return (
     <BrowserRouter>
