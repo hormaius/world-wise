@@ -34,17 +34,18 @@ function App() {
     }
   }, []); */
 
+  const BASE_URL = "http://localhost:8000";
+
   useEffect(() => {
     const fetchJson = async () => {
       setIsLoading(true);
-      const response = await fetch("../data/cities.json");
+      const response = await fetch(`${BASE_URL}/cities`);
       const data = await response.json();
       setCities(data);
       setIsLoading(false);
     };
     fetchJson();
   }, []);
-  console.log(`cities:`, cities);
 
   return (
     <BrowserRouter>
