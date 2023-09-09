@@ -1,40 +1,40 @@
 {
   "cities": [
     {
-      "cityName": "Lisbon",
-      "country": "Portugal",
-      "emoji": "🇵🇹",
-      "date": "2027-10-31T15:59:59.138Z",
-      "notes": "My favorite city so far!",
-      "position": {
-        "lat": 38.727881642324164,
-        "lng": -9.140900099907554
-      },
-      "id": 73930385
-    },
-    {
-      "cityName": "Madrid",
-      "country": "Spain",
-      "emoji": "🇪🇸",
-      "date": "2027-07-15T08:22:53.976Z",
+      "cityName": "Rosenau am Hengstpass",
+      "country": "Austria",
+      "emoji": "🇦🇹",
+      "date": "2023-09-09T13:59:21.841Z",
       "notes": "",
       "position": {
-        "lat": 40.46635901755316,
-        "lng": -3.7133789062500004
+        "lat": "47.68018294648414",
+        "lng": "14.436035156250002"
       },
-      "id": 17806751
+      "id": 1
     },
     {
-      "cityName": "Berlin",
+      "cityName": "Unstrut-Hainich",
       "country": "Germany",
       "emoji": "🇩🇪",
-      "date": "2027-02-12T09:24:11.863Z",
-      "notes": "Amazing 😃",
+      "date": "2023-09-09T13:59:24.034Z",
+      "notes": "",
       "position": {
-        "lat": 52.53586782505711,
-        "lng": 13.376933665713324
+        "lat": "51.11041991029264",
+        "lng": "10.502929687500002"
       },
-      "id": 98443197
+      "id": 2
+    },
+    {
+      "cityName": "Bertem",
+      "country": "Belgium",
+      "emoji": "🇧🇪",
+      "date": "2023-09-09T13:59:27.754Z",
+      "notes": "",
+      "position": {
+        "lat": "50.84757295365389",
+        "lng": "4.570312500000001"
+      },
+      "id": 3
     }
   ]
 }
