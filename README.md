@@ -1,8 +1,11 @@
-# React + Vite
+<div style="display: flex; align-items: center; gap: 1rem" ><img src="public/icon.png" width="48" height="48" /><p>WorldWise</p></div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+WorldWise is a learning project
+for [Jonas Schmedtmann's React Course](https://www.udemy.com/course/the-ultimate-react-course/) on Udemy. This project
+was coded using React with
+Vite throughout the course with various topics taught to teach React on a deeper technical level, using concepts such
+as:
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Context API along with custom hooks to facilitate developing experience
+- React Router to set page navigation up
+- Optimization methods: useCallback, useMemo, {children} props to optimize rendering
